@@ -2,9 +2,9 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import ContactPhoneIcon from '@material-ui/icons/ContactPhone';
-import LocationOnIcon from '@material-ui/icons/LocationOn';
-import ContactMailIcon from '@material-ui/icons/ContactMail';
+import Typography from '@material-ui/core/Typography'
+import ArrowRightIcon from '@material-ui/icons/ArrowRight';
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -15,18 +15,19 @@ const useStyles = makeStyles((theme) => ({
   },
   paper: {
     padding: theme.spacing(2),
-   
-   
-    textAlign: 'center',
+    height:350,
+    width:300,
+    textAlign: 'left',
     color:"#f5f5f5",
     backgroundColor:"rgb(4, 5, 12)",
-   
+    border:"solid",
+    borderColor:"#ffb300"
   },
   title:{
     
     color: "#f5f5f5",
     fontFamily: ["Lucida Console","Courier"], 
-    
+    fontWeight:"bold",
     display: 'block',
     marginLeft: 'auto',
     marginRight: 'auto',
@@ -35,8 +36,8 @@ const useStyles = makeStyles((theme) => ({
   title1:{
     
     color: "#ffb300",
-    fontFamily: ["Comic Sans MS", "Comic Sans"], 
-   
+    fontFamily:["Comic Sans MS", "Comic Sans"], 
+    fontWeight:"bold",
     fontSize:20,
     display: 'block',
     marginLeft: 'auto',
@@ -62,55 +63,34 @@ const useStyles = makeStyles((theme) => ({
     
  }
 },
-title:{
-    
-    color: "#f5f5f5",
-    fontFamily: ["Lucida Console","Courier"], 
-    
-    display: 'block',
-    marginLeft: 'auto',
-    marginRight: 'auto',
-    fontSize:20
-   
-  },
    
   
 }));
 
-export default function Contact() {
+export default function Projects() {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={3} className={classes.avtar}>
+      <Grid container spacing={8} className={classes.avtar}>
         
         <Grid item xs={12}   ><br/><br/><br/>
-        <Paper className={classes.heading} style={{fontSize:50,fontWeight:"bold"}} > Contact
+        <Paper className={classes.heading} style={{fontSize:50,fontWeight:"bold"}} > Project's
+          </Paper>
+        </Grid>
+        <Grid item xs={12} sm={3} > 
+          <Paper className={classes.paper}>Adding soon
           </Paper>
         </Grid>
         
-        <Grid item xs={12}  > <br/><br/><br/>
-          <Paper className={[classes.paper,classes.title]}><LocationOnIcon style={{fontSize:20}}/>At Post Bela ,Tah-Umrer ,District-Nagpur,Maharashtra-441108
+        <Grid item xs={12} sm={3}> 
+          <Paper className={classes.paper}>Adding soon
           </Paper>
         </Grid>
-       
-        <Grid item xs={12}  > 
-          <Paper className={[classes.paper,classes.title]} ><ContactPhoneIcon style={{fontSize:20, paddingLeft:1}}/>  7888137148
+        <Grid item xs={12} sm={3}>
+        <Paper className={classes.paper}>Adding soon
           </Paper>
         </Grid>
-       
-          
-        <Grid item xs={12} > 
-          <Paper className={[classes.paper,classes.title]}  >   <ContactMailIcon style={{fontSize:20}}/>muskanmakde1999@gmail.com
-          </Paper>
-        </Grid>
-        
-      
-        
-        
-       
-      
-       
        
         
         

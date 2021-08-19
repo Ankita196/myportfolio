@@ -2,10 +2,10 @@ import React from 'react';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
-
+import Toolbar from '@material-ui/core/Toolbar';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
-
+import {Link} from "react-router-dom"
 import ListItemText from '@material-ui/core/ListItemText';
 
 import MenuIcon from '@material-ui/icons/Menu';
@@ -13,6 +13,7 @@ import Avatar from '@material-ui/core/Avatar';
 import profile1 from "./profile1.jpg"; 
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
+import { AppBar } from '@material-ui/core';
 
 const useStyles = makeStyles((theme)=>({ 
   list: {
@@ -21,7 +22,7 @@ const useStyles = makeStyles((theme)=>({
     justifyContent:'center',
     justifyItems:'center',
     color: '#263238',
-    fontFamily: ["Lucida Console","Courier New"], 
+    fontFamily:["Comic Sans MS", "Comic Sans"], 
     fontWeight:'bold',
     display: 'block',
     marginLeft: 10,
@@ -32,7 +33,7 @@ const useStyles = makeStyles((theme)=>({
   title:{
     
     color: '#263238',
-    fontFamily: ["cursive",'Lucida Console',"Courier New"], 
+    fontFamily: ["Comic Sans MS", "Comic Sans"], 
     fontWeight:'bold',
     display: 'block',
     marginLeft: 'auto',
@@ -53,9 +54,10 @@ const useStyles = makeStyles((theme)=>({
     
   },
   menuButton: {
-    display:"flex",
-    paddingLeft:50,
-
+    
+  
+   
+      marginRight: theme.spacing(2),
     
 
   },
@@ -63,6 +65,9 @@ const useStyles = makeStyles((theme)=>({
   fullList: {
     width: 'auto',
     
+  },
+   root: {
+    flexGrow: 1,
   },
 }));
 
@@ -96,39 +101,42 @@ export default function Layout() {
         <Divider ></Divider>
       <List className={classes.list}>
       <ListItemText > <Typography className={classes.title} variant="h6" >
-          Home
+      <Link to="/" style={{ textDecoration: 'none', color: '#263238' }}> About Me</Link>
            </Typography></ListItemText> <br/>
+     
       <ListItemText > <Typography className={classes.title} variant="h6" >
-          About Me
+      <Link to="/education" style={{ textDecoration: 'none', color: '#263238' }}>  Education</Link>
            </Typography></ListItemText><br/>
       <ListItemText > <Typography className={classes.title} variant="h6" >
-          Education
+      <Link to="/skills" style={{ textDecoration: 'none', color: '#263238' }}>  Skills</Link>
            </Typography></ListItemText><br/>
       <ListItemText > <Typography className={classes.title} variant="h6" >
-          Skills
+      <Link to="/projects" style={{ textDecoration: 'none', color: '#263238' }}>   Project's</Link>
            </Typography></ListItemText><br/>
       <ListItemText > <Typography className={classes.title} variant="h6" >
-           Project's
-           </Typography></ListItemText><br/>
-      <ListItemText > <Typography className={classes.title} variant="h6" >
-           Contact
-           </Typography></ListItemText>
-
+      <Link to="/contact" style={{ textDecoration: 'none', color: '#263238' }}>  Contact</Link>
+           </Typography></ListItemText><br/><br/>
+           <Typography className={classes.title} variant="h6" style={{color:'#c51162'}}>Made by<br/> Ankita Makade</Typography>
       </List>
       
     </div>
   );
 
   return (
-    <div>
+    <div >
       {['left'].map((anchor) => (
-        <React.Fragment key={anchor} style={{backgroundColor:"blue"}}>
-         
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" aria-haspopup="true" onClick={toggleDrawer(anchor, true)} >
-           
-            <MenuIcon style={{ fontSize: 50 , color:"white"}} />
-            
-          </IconButton >
+        <React.Fragment key={anchor} >
+         <div className={classes.root}>
+         <AppBar position="fixed" style={{backgroundColor:"rgb(4, 5, 12)"}}>
+         <Toolbar>
+    <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" onClick={toggleDrawer(anchor, true)}>
+      <MenuIcon style={{ fontSize: 50 , color:"white"}} />
+    </IconButton>
+   
+    </Toolbar>
+ 
+</AppBar>
+</div>
           <SwipeableDrawer 
             anchor={anchor}
             open={state[anchor]}

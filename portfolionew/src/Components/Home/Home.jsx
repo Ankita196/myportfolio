@@ -15,6 +15,7 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'block',
+    marginTop:50
    
     
   },
@@ -79,7 +80,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     color: "#f5f5f5",
    
-    fontFamily:'cursive',
+    fontFamily:["Comic Sans MS", "Comic Sans"],
     backgroundColor:"rgb(4, 5, 12)",
     
     
@@ -114,7 +115,7 @@ export default function Home() {
     </div>
         </Grid>
         </Grid> 
-        <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> 
+        
         
     </div>
   );

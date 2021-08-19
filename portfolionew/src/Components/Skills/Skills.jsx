@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
     color: "#f5f5f5",
     
    justifyContent:'center',
-    fontFamily:'cursive',
+    fontFamily:["Comic Sans MS", "Comic Sans"],
     backgroundColor:"rgb(4, 5, 12)",
     
     
@@ -62,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
     color: "#ad1457",
     
    justifyContent:'center',
-    fontFamily:'cursive',
+    fontFamily:["Comic Sans MS", "Comic Sans"],
     backgroundColor:"rgb(4, 5, 12)",
   }
 }));
@@ -77,7 +77,7 @@ export default function Skills() {
      
       
       
-        <Grid item xs={12}>
+        <Grid item xs={12}><br/><br/><br/>
         <Paper className={classes.heading} style={{fontSize:50,fontWeight:"bold"}} > Skills 
           </Paper><br/><br/><br/><br/>
           <Paper className={classes.paper} style={{fontSize:25}} > I am  Proficient in developing web pages and single page application <br/>using HTML ,CSS ,Bootstrap,Material-Ui,React js,Jvascript
