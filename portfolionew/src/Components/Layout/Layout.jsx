@@ -100,22 +100,22 @@ export default function Layout() {
         <br/>
         <Divider ></Divider>
       <List className={classes.list}>
-      <ListItemText > <Typography className={classes.title} variant="h6" >
-      <Link to="/" style={{ textDecoration: 'none', color: '#263238' }}> About Me</Link>
-           </Typography></ListItemText> <br/>
+      <ListItemText ><Link to="/" style={{ textDecoration: 'none', color: '#263238' }}>  <Typography className={classes.title} variant="h6" >
+      About Me
+           </Typography></Link></ListItemText> <br/>
      
-      <ListItemText > <Typography className={classes.title} variant="h6" >
-      <Link to="/education" style={{ textDecoration: 'none', color: '#263238' }}>  Education</Link>
-           </Typography></ListItemText><br/>
-      <ListItemText > <Typography className={classes.title} variant="h6" >
-      <Link to="/skills" style={{ textDecoration: 'none', color: '#263238' }}>  Skills</Link>
-           </Typography></ListItemText><br/>
-      <ListItemText > <Typography className={classes.title} variant="h6" >
-      <Link to="/projects" style={{ textDecoration: 'none', color: '#263238' }}>   Project's</Link>
-           </Typography></ListItemText><br/>
-      <ListItemText > <Typography className={classes.title} variant="h6" >
-      <Link to="/contact" style={{ textDecoration: 'none', color: '#263238' }}>  Contact</Link>
-           </Typography></ListItemText><br/><br/>
+      <ListItemText >  <Link to="/education" style={{ textDecoration: 'none', color: '#263238' }}> <Typography className={classes.title} variant="h6" >
+      Education
+           </Typography></Link></ListItemText><br/>
+      <ListItemText ><Link to="/skills" style={{ textDecoration: 'none', color: '#263238' }}> <Typography className={classes.title} variant="h6" >
+        Skills
+           </Typography></Link></ListItemText><br/>
+      <ListItemText >  <Link to="/projects" style={{ textDecoration: 'none', color: '#263238' }}><Typography className={classes.title} variant="h6" >
+        Project's
+           </Typography></Link></ListItemText><br/>
+      <ListItemText > <Link to="/contact" style={{ textDecoration: 'none', color: '#263238' }}> <Typography className={classes.title} variant="h6" >
+       Contact
+           </Typography></Link></ListItemText><br/><br/>
            <Typography className={classes.title} variant="h6" style={{color:'#c51162'}}>Made by<br/> Ankita Makade</Typography>
       </List>
       
